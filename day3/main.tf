@@ -1,9 +1,9 @@
-Assignment 3
+#Assignment 3
 provider "aws" {
         alias = "NV"
         region = "us-east-1"
-        access_key = ""
-        secret_key = ""
+        #access_key = ""
+        #secret_key = ""
 }
 provider "aws" {
         alias = "Ohio"
