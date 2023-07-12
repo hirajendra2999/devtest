@@ -24,7 +24,7 @@ resource "aws_instance" "assignment-3-2" {
         provider = aws.Ohio
         ami = "ami-069d73f3235b535bd"
         instance_type = "t2.micro"
-        key_name = "raj"
+        key_name = "test"
         tags = {
         Name = "hello-ohio"
         }
