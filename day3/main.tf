@@ -8,8 +8,8 @@ provider "aws" {
 provider "aws" {
         alias = "Ohio"
         region = "us-east-2"
-        access_key = ""
-        secret_key = ""
+        #access_key = ""
+        #secret_key = ""
 }
 resource "aws_instance" "assignment-3-1" {
         provider = aws.NV
