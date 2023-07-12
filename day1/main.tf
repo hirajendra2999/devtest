@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "assignment-4" {
-        ami = "ami-006935d9a6773e4ec"
+        ami = "ami-069d73f3235b535bd"
         instance_type = "t2.micro"
         key_name = ""
         tags = {
