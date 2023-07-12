@@ -13,7 +13,7 @@ provider "aws" {
 }
 resource "aws_instance" "assignment-3-1" {
         provider = aws.NV
-        ami = "ami-08d4ac5b34553e16"
+        ami = "ami-04823729c75214919"
         instance_type = "t2.micro"
         key_name = "Sameer"
         tags = {
