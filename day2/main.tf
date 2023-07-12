@@ -12,7 +12,7 @@ resource "aws_instance" "assignment-2" {
         }
 }
 resource "aws_eip" "eip" {
-  vpc = false
+  vpc = true
 }
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.assignment-2.id
