@@ -8,11 +8,11 @@ resource "aws_instance" "a5-instance" {
         ami = "ami-024e6efaf93d85776"
         instance_type = "t2.micro"
         key_name = ""
-        user_data = "${file("install-apache2.sh")}"
+       # user_data = "${file("install-apache2.sh")}"
         tags = {
                 Name = "a5-instance"
         }
-        user_data = <<-EOF
+user_data = <<-EOF
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
