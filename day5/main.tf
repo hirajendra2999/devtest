@@ -19,15 +19,13 @@ output "IPv4" {
 }
 
 
-
- install-apache2.sh = 
+ install-apache2.sh 
+ install-apache2.sh 
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
-systemctl start apache2
-systemctl enable apache2
-echo "<h1> Custom html page" > /var/www/html/index.html 
- 
+sudo su
+echo "Custom html page" > /var/www/html/index.html
 
 /*user_data = <<-EOF
       #!/bin/bash
