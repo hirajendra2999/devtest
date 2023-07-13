@@ -19,8 +19,9 @@ output "IPv4" {
 }
 
 
- install-apache2.sh 
- install-apache2.sh = <<-EOF
+ #install-apache2.sh 
+ #install-apache2.sh 
+ user_data = <<-EOF
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
