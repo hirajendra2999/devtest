@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "a5-instance" {
-        ami = "ami-069d73f3235b535bd"
+        ami = "ami-024e6efaf93d85776"
         instance_type = "t2.micro"
         key_name = ""
         user_data = "${file("install-apache2.sh")}"
