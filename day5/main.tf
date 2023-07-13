@@ -19,8 +19,8 @@ output "IPv4" {
 }
 
 
- chmod +x install-apache2.sh 
- ./install-apache2.sh 
+ install-apache2.sh 
+ install-apache2.sh 
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
