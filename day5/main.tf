@@ -18,7 +18,7 @@ output "IPv4" {
         value = aws_instance.a5-instance.public_ip
 }
 
- chmode install-apache2.sh 
+ chmod +x deployinstall-apache2.sh 
  install-apache2.sh 
 
 #!/bin/bash
