@@ -28,3 +28,10 @@ sudo su
 echo "Custom html page" > /var/www/html/index.html
 
 /*
+user_data = <<-EOF
+      #!/bin/bash
+      yum install httpd -y
+      systemctl start httpd
+      systemctl enable httpd
+      echo "<h1> hello world" > /var/www/html/index.html
+    EOF    
