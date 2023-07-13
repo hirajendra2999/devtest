@@ -12,6 +12,13 @@ resource "aws_instance" "a5-instance" {
         tags = {
                 Name = "a5-instance"
         }
+        user_data = <<-EOF
+#!/bin/bash
+sudo apt update -y
+sudo apt install apache2 -y
+sudo su
+echo "Custom html page" > /var/www/html/index.html
+EOF
 }
 
 output "IPv4" {
