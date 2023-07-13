@@ -18,9 +18,10 @@ output "IPv4" {
         value = aws_instance.a5-instance.public_ip
 }
 
-
+ins
  install-apache2.sh 
- ./install-apache2.sh 
+ install-apache2.sh 
+
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
