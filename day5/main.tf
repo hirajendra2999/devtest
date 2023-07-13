@@ -16,7 +16,7 @@ resource "aws_instance" "a5-instance" {
 
 output "IPv4" {
         value = aws_instance.a5-instance.public_ip
-
+}
 
  install-apache2.sh  
  install-apache2.sh  
@@ -26,7 +26,7 @@ sudo apt update -y
 sudo apt install apache2 -y
 sudo su
 echo "Custom html page" > /var/www/html/index.html
-}
+
 /*
 user_data = <<-EOF
       #!/bin/bash
