@@ -23,7 +23,7 @@ resource "aws_vpc" "assignment-4-vpc" {
 
 resource "aws_subnet" "assignment-4-subnet" {
         vpc_id = aws_vpc.assignment-4-vpc.id
-        cidr_block = "10.10.1.0/18"
+        cidr_block = "10.10.1.0/1"
         availability_zone = "us-east-2a"
         tags = {
         Name = "assignment-4-subnet"
