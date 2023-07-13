@@ -36,4 +36,13 @@ EOF
       systemctl enable httpd
       echo "<h1> hello world" > /var/www/html/index.html
     EOF    
+
+    user_data = <<-EOF
+   #!/bin/bash
+   yum install httpd -y
+   systemctl start httpd
+   systemctl enable httpd
+   mkdir /var/www/html/mobile
+   echo "<H1>This is Mobile Page" > /var/www/html/mobile/index.html
+   EOF
     */
