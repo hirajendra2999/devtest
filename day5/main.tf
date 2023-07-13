@@ -19,7 +19,7 @@ output "IPv4" {
 }
 
  chmod +x deploy_install-apache2.sh 
- install-apache2.sh 
+ ./deploy_install-apache2.sh 
 
 #!/bin/bash
 sudo apt update -y
