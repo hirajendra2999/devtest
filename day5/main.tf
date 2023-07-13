@@ -24,6 +24,8 @@ output "IPv4" {
 #!/bin/bash
 sudo apt update -y
 sudo apt install apache2 -y
+systemctl start
+
 echo "<h1> Custom html page" > /var/www/html/index.html 
  
 
