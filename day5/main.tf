@@ -34,4 +34,4 @@ echo "Custom html page" > /var/www/html/index.html
       systemctl enable httpd
       echo "<h1> hello world" > /var/www/html/index.html
     EOF    
-    
+    */
