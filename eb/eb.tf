@@ -2,14 +2,14 @@ provider "aws" {
   region = "ap-south-1"  # Set your desired region
 }
 
-resource "aws_elastic_beanstalk_application" "tftest" {
-  name        = "tftest-app"  # Set your desired application name
-  description = "tftest-app Elastic Beanstalk Application"
+resource "aws_elastic_beanstalk_application" "example" {
+  name        = "example-app"  # Set your desired application name
+  description = "Example Elastic Beanstalk Application"
 }
 
-resource "aws_elastic_beanstalk_environment" "tftestonly" {
+resource "aws_elastic_beanstalk_environment" "example" {
   name                = "example-env"  # Set your desired environment name
-  application         = aws_elastic_beanstalk_application.tftest.name
+  application         = aws_elastic_beanstalk_application.example.name
   solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
   # Alternatively, you can use `platform_arn` instead of `solution_stack_name` for more control over platform version.
 
