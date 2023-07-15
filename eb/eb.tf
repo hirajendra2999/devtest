@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_elastic_beanstalk_application" "tftest" {
   name        = "tftest-app"  # Set your desired application name
-  description = "Example Elastic Beanstalk Application"
+  description = "tftest-app Elastic Beanstalk Application"
 }
 
 resource "aws_elastic_beanstalk_environment" "example" {
