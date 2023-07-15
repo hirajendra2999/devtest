@@ -1,7 +1,7 @@
 variable "vpc_cidr" {
    description = "Please Enter VPC_cidr"
 }
-variable "instance-type"{
+variable "instance_type"{
     description = "Please Enter instance-type"
 }
 
