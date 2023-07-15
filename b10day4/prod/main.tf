@@ -1,7 +1,7 @@
 module "myvpc" {
     source = "../modules/vpc"
     #vpc_cidr = "${var.vpc_cidr}"
-    vpc_cidr = "10."
+    vpc_cidr = "10.50.0.0/50"
     env_tag = "production"
     vpc_id = "${module.myvpc.vpcid}"
     subnet_cidr = "${var.subnet_cidr}"
