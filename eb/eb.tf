@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-south-1"  # Set your desired region
 }
 
-resource "aws_elastic_beanstalk_application" "example" {
+resource "aws_elastic_beanstalk_application" "test" {
   name        = "example-app"  # Set your desired application name
   description = "abcd Elastic Beanstalk Application"
 }
