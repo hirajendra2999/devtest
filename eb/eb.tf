@@ -7,7 +7,7 @@ resource "aws_elastic_beanstalk_application" "tftest" {
   description = "tftest-app Elastic Beanstalk Application"
 }
 
-resource "aws_elastic_beanstalk_environment" "tftest" {
+resource "aws_elastic_beanstalk_environment" "tftestonly" {
   name                = "example-env"  # Set your desired environment name
   application         = aws_elastic_beanstalk_application.tftest.name
   solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
