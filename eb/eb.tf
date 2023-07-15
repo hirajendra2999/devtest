@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 resource "aws_elastic_beanstalk_application" "test" {
-  name        = "test-app"  # Set your desired application name
+  name        = "exampl-app"  # Set your desired application name
   description = "test Elastic Beanstalk Application"
 }
 
 resource "aws_elastic_beanstalk_environment" "abcd" {
-  name                = "abcd"  # Set your desired environment name
+  name                = "exampl"  # Set your desired environment name
   application         = aws_elastic_beanstalk_application.test.name
   solution_stack_name = "64bit Amazon Linux 2 v5.4.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
   # Alternatively, you can use `platform_arn` instead of `solution_stack_name` for more control over platform version.
