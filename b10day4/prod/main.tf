@@ -13,6 +13,7 @@ module "myinstance" {
   source = "../modules/instance"
   ami_id = "ami-0b08bfc6ff7069aff"
   ## ami_id = "${module.myinstance.amiid}"
+  #instance_type = "${var.instance_type}"
   instance_type = "${var.instance_type}"
   ## instance_type = "${module.myinstance.instancetype"
   env_tag = "production"
