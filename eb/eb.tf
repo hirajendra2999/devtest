@@ -7,7 +7,7 @@ resource "aws_elastic_beanstalk_application" "example" {
   description = "abcd Elastic Beanstalk Application"
 }
 
-resource "aws_elastic_beanstalk_environment" "test" {
+resource "aws_elastic_beanstalk_environment" "example" {
   name                = "example-env"  # Set your desired environment name
   application         = aws_elastic_beanstalk_application.example.name
   solution_stack_name = "64bit Amazon Linux 2 v5.4.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
