@@ -5,7 +5,7 @@ module "myvpc" {
     env_tag = "production"
     vpc_id = "${module.myvpc.vpcid}"
     #subnet_cidr = "${var.subnet_cidr}"
-
+    subnet_cidr = ""
     allow_public_ip = true
 }
 
