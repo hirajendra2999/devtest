@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elastic_beanstalk_application" "abcd" {
-  name        = "exampl-app"  # Set your desired application name
+  name        = "abcd-app"  # Set your desired application name
   description = "test Elastic Beanstalk Application"
 }
 
