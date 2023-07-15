@@ -2,12 +2,12 @@ provider "aws" {
   region = "ap-south-1"  # Set your desired region
 }
 
-resource "aws_elastic_beanstalk_application" "test" {
+resource "aws_elastic_beanstalk_application" "example" {
   name        = "exampl-app"  # Set your desired application name
   description = "test Elastic Beanstalk Application"
 }
 
-resource "aws_elastic_beanstalk_environment" "abcd" {
+resource "aws_elastic_beanstalk_environment" "example" {
   name                = "exampl"  # Set your desired environment name
   application         = aws_elastic_beanstalk_application.test.name
   solution_stack_name = "64bit Amazon Linux 2 v5.4.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
