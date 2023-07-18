@@ -15,7 +15,7 @@ resource "aws_elastic_beanstalk_application" "tftest" {
   
 
 
-resource "aws_elastic_beanstalk_environment" "tfenvtest" {
+resource "aws_elastic_beanstalk_environment" "tf-test-name" {
   name                = "tf-test-name"
   application         = "${aws_elastic_beanstalk_application.tftest.name}"
 }
