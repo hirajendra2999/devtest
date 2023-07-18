@@ -13,7 +13,7 @@ resource "aws_elastic_beanstalk_environment" "tfenvtest" {
 
 resource "aws_elastic_beanstalk_environment" "example" {
   name                = "pqrst"  # Set your desired environment name
-  application         = aws_elastic_beanstalk_application.abcd.name
+  application         = aws_elastic_beanstalk_application.abcd.name  */
 
 
 
