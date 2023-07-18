@@ -21,7 +21,7 @@ resource "aws_elastic_beanstalk_environment" "tf-test-name" {
 }
 
 
-  solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
+  solution_stack_name = "64bit Amazon Linux 2 v3.5.5 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
   # Alternatively, you can use `platform_arn` instead of `solution_stack_name` for more control over platform version.
 
   # Custom configuration
