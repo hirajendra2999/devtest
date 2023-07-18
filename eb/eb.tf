@@ -2,10 +2,11 @@ provider "aws" {
   region = "ap-south-1"  # Set your desired region
 }
 
+resource "aws_elastic_beanstalk_environment" "tfenvtest" {
+  name = "tf-test-name" # can use expressions here
+}
 
-
-
-resource "aws_elastic_beanstalk_application" "example" {
+/*resource "aws_elastic_beanstalk_application" "example" {
   name        = "abcd"  # Set your desired application name
   description = "abcd Elastic Beanstalk Application"
 }
