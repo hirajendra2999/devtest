@@ -18,6 +18,7 @@ resource "aws_elastic_beanstalk_environment" "example" {
 resource "aws_elastic_beanstalk_environment" "tfenvtest" {
   name                = "tf-test-name"
   application         = "${aws_elastic_beanstalk_application.tftest.name}"
+}
 
 
   solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running PHP 8.1"  # Set the desired solution stack for PHP 8.1
