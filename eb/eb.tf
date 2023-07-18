@@ -5,7 +5,7 @@ provider "aws" {
 
 
 resource "aws_elastic_beanstalk_application" "tftest" {
-  name        = "abcd"  # Set your desired application name
+  name        = "tftest"  # Set your desired application name
   description = "abcd Elastic Beanstalk Application"
 }
 
