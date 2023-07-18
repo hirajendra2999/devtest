@@ -10,7 +10,7 @@ resource "aws_elastic_beanstalk_environment" "tfenvtest" {
   name        = "abcd"  # Set your desired application name
   description = "abcd Elastic Beanstalk Application"
 }
-
+*/
 resource "aws_elastic_beanstalk_environment" "example" {
   name                = "pqrst"  # Set your desired environment name
   application         = aws_elastic_beanstalk_application.abcd.name
