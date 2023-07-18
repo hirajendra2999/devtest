@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') {             
+            steps {
+                git 'https://github.com/hirajendra2999/studentapp-ui.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh 'mvn clean package'               
+            }    
+        }
+        stage('Test') { 
+            steps {
+                echo 'Test Success!'
+            }    
+        }
+        stage('Deploy') { 
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'tomacat-user', path: '', url: 'http://172.31.46.203:8080')], contextPath: '/', war: '**/*.war'              
+            }    
+        }
+    }
+}    
