@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') { 
             steps {
-                git credentialsId: 'github-git', url: 'https://github.com/hirajendra2999/rworld.git'
+                git branch: 'main', credentialsId: 'rj', url: 'https://github.com/hirajendra2999/devtest.git'
             }
         }
         stage('Build') { 
