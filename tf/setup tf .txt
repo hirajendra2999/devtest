@@ -1,0 +1,25 @@
+sudo yum install git -y
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+
+terraform -help
+terraform -help plan
+touch ~/.bashrc
+terraform -install-autocomplete
+terraform --version
+
+
+vim /etc/profile
+
+alias tf='terraform'
+alias gp='git pull origin main'
+alias tfa='terraform apply --auto-approve'
+alias tfd='terraform destroy --auto-approve'
+alias tfp='terraform plan'
+alias sep='source /etc/profile'
+
+source /etc/profile
+
+
