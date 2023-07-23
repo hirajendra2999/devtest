@@ -1,5 +1,5 @@
 pipeline {
-    agent {test} 
+    agent {test
     stages {
         stage('Pull') { 
             steps {
