@@ -1,7 +1,8 @@
 pipeline {
-    agent ('test')
+    agent test 
     stages {
         stage('Pull') { 
+            agent test 
             steps {
                 git branch: 'main', credentialsId: 'rj', url: 'https://github.com/hirajendra2999/devtest.git'
             }
