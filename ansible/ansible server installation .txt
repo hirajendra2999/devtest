@@ -1,0 +1,224 @@
+yum update -y
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install epel-release-latest-7.noarch.rpm
+yum update -y
+yum install git python python-devel python-pip openssl ansible -y
+ansible --version
+
+______________________________
+vi /etc/ansible/hosts
+
+[demo]
+node1****IP
+_:wq_________________________________
+vi /etc/ansible/ansible.cfg
+
+uncommented   (inventry   ,  
+                       sudo-user = root)
+:wq
+___________________________________________
+useradd ansible
+passwd ansible
+_________________________________________
+visudo
+uncomented   
+          [ root ALL = (ALL)  ALL ]
+		  ansible ALL = (ALL)  NOPASSWD: ALL
+:wq		  
+_________________________________________
+
+node1 same command  ----------  node1  --------
+su ansible
+sudo yum install httpd -y
+
+
+_________________________________________
+
+vi /etc/ssh/sshd_config
+uncommented
+    PermitRootLogin yes
+    password athentication yes
+commented
+	#password athentication no	   
+	
+:wq
+___________________________________________
+
+
+service sshd restart
+
+node1 same command  ----------  node1  --------
+
+
+su ansible
+ssh-keygen
+la -a
+cd .ssh
+ssh-copy-id ansible@----ip node1-------
+
+cd ..
+
+ssh --------ip node1-------
+
+ansible all --list-host
+ansible demo --list-host
+ansible demo[0] --list-host
+ansible demo[1] --list-host
+ansible demo[-1] --list-host
+ansible demo[0:1] --list-host
+
+add hok command
+
+ansible demo -a "ls"
+ansible all -a "ls"
+
+ansible all -a "touch file"
+ansible demo -a "sudo yum install httpd"
+ansible demo -ba "yum install httpd"
+
+
+module
+ ansible demo -b -m yum -a "pkg=httpd state=present"
+ ansible demo -b -m yum -a "pkg=httpd state=absent"
+ansible demo -m setup
+ansible demo -m setup -a "filter=*ipv4*"
+----------------------------------------------------------
+playbook 
+
+vi target.yml
+
+--- #my 1st target.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+:wq
+ansible-playbook target.yml
+--------------------------------------------------------------
+task.yml playbook
+
+--- #my 2nd task.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install HTTPD on centos 7
+      action: yum name=httpd state=installed
+:wq
+ansible-playbook task.yml.yml
+---------------------------------------------------------------
+3rd variable.yml playbook
+
+--- #my 3rd variable.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+   pkgname: httpd
+  tasks:
+    - name: install httpd server on centos 7
+      action: yum name='{{pkgname}}' state=installed
+:wq
+ansible-playbook variable.yml
+---------------------------------------------------------------
+handlers.yml playbook
+
+--- #my 4th handlers.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install httpd server on centos 7
+      action: yum name=httpd state=installed
+      notify: restart httpd
+  handlers:
+    - name: restart httpd
+      action: service name=httpd state=installed
+:wq
+ansible-handlers loop.yml
+----------------------------------------------------------------
+loop.yml playbook
+
+--- #my 5th loop.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: add list of userin my node
+            user: name='{{item}}' state=present
+            with_items:
+                    - rohan
+                    - shilpa
+                    - neha
+                    - sweta
+
+:wq
+ansible-playbook loop.yml
+-----------------------------------------------------------------
+condition.yml playbook
+
+--- #my 6th condition.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: install apache server for debian family
+            command: apt-get -y install apache2
+            when: ansible_os_family == "Debian"
+          - name: install apache server for redhat family
+            command: yum -y install httpd
+            when: ansible_os_family == "RedHat"
+
+:wq
+ansible-playbook condition.yml
+--------------------------------------------------------------
+Encription
+
+ansible-vault create vault.yml
+
+New Vault password: ***
+Confirm New Vault password: ***
+
+--- #my 6th condition.yml playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: install apache server for debian family
+            command: apt-get -y install apache2
+            when: ansible_os_family == "Debian"
+          - name: install apache server for redhat family
+            command: yum -y install httpd
+            when: ansible_os_family == "RedHat"
+:wq
+----------------------------------------------------------
+vi vault.yml
+
+$ANSIBLE_VAULT;1.1;AES256
+30643731366362653266613839613532343832303966303838303935303963316464373437323239
+3433353963393362363561343735653732613237323465660a626231323632653265393562383936
+37343238343565383033623165366463386430376535363961303538643737316430303164376538
+3963363335656133310a656462623434623330653138313465363334616339346535623739653362
+39386235323964636533383230313230616665383165303531316264313039373331343165393431
+38326136626164323038616266353139373961376639666134643234316538616131373931653431
+33333337346232666332633262376665653863633739663830653165316138353936356264353835
+32386532326263623266376338323130313462663938626638646164316432323261316638306535
+65373435653861323264346136623237313734326666636437643436323538303265643566666333
+63366438343935383531643935383232653962386663636539346163393165663934303435363366
+37303966363364633133326433636163303333326132333665353562663465313132326163343235
+61643539626662396636656638343637313136653665656632346239336131393234346463663938
+35656538666166386431623165663364663733663464326335333761356161313834343137343432
+356131
+:wq
+----------------------------------------------------------
+ansible-vault edit vault.yml
+Vault password: ***
+
+:wq
