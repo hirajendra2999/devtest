@@ -136,17 +136,17 @@ variable "notification_topic_arn" {
   description = "Amazon Resource Name for the topic you subscribed to."
 }
 variable "enable_http" {
-  type = "string"
+#  type = "string"
   default = "true"
   description = "Enable or disable default HTTP connection on port 80."
 }
 variable "enable_https" {
-  type = "string"
+ # type = "string"
   default = "true"
   description = "Enable or disable HTTPS connection on port 443."
 }
 variable "elb_connection_timeout" {
-  type = "string"
+ # type = "string"
   default = "60"
   description = "Number of seconds that the load balancer waits for any data to be sent or received over the connection."
 }
