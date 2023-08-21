@@ -40,19 +40,19 @@ variable "instance_volume_size" {
   # 8 to 1024 GB for magnetic.
 }
 variable "instance_volume_iops" {
-  type    = "string"
+ # type    = "string"
   default = "100"
   description = "Desired input/output operations per second (IOPS) for a provisioned IOPS SSD root volume."
   # The maximum ratio of IOPS to volume size is 30 to 1. For example, a volume with 3000 IOPS must be at least 100 GB.
   # Value can be from 100 to 20000
 }
 variable "ssh_key_name" {
-  type    = "string"
+ # type    = "string"
   default = "Ireland_VPC"
   description = "The EC2 SSH KeyPair Name"
 }
 variable "public_ip" {
-  type = "string"
+#  type = "string"
   default = "false"
   description = "EC2 instances must have a public ip (true | false)"
 }
