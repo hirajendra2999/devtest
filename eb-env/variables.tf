@@ -52,7 +52,7 @@ variable "ssh_key_name" {
   description = "The EC2 SSH KeyPair Name"
 }
 variable "public_ip" {
-  type = "string"
+  #type = "string"
   default = "false"
   description = "EC2 instances must have a public ip (true | false)"
 }
