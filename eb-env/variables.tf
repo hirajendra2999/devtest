@@ -201,8 +201,8 @@ variable "as_upper_threshold" {
 # PHP Platform Options
 # Namespace: aws:elasticbeanstalk:container:php:phpini
 variable "eb_solution_stack_name" {
-  default = "64bit Amazon Linux 2 v3.3.14 running PHP"
   # type    = "string"
+  default = "64bit Amazon Linux 2018.03 v2.8.12 running PHP 7.2"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "php_version" {
