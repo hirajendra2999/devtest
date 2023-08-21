@@ -207,7 +207,7 @@ variable "eb_solution_stack_name" {
 }
 variable "php_version" {
   # type    = "string"
-  default = "8.1"
+  default = "7.2"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "document_root" {
