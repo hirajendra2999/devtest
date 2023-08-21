@@ -9,7 +9,7 @@ variable "aws_region" {
 
 # Application
 variable "service_name" {
-  type    = "string"
+ # type    = "string"
   description = "The application name"
 }
 variable "env" {
