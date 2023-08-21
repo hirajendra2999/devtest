@@ -14,7 +14,7 @@ variable "service_name" {
 }
 variable "env" {
   # type    = "string"
-  default = "dev"
+  default = "dev123"
   description = "The environment (dev, stage, prod)"
 }
 
@@ -201,13 +201,14 @@ variable "as_upper_threshold" {
 # PHP Platform Options
 # Namespace: aws:elasticbeanstalk:container:php:phpini
 variable "eb_solution_stack_name" {
+  default = "64bit Amazon Linux 2 v3.2.1 running PHP"
   # type    = "string"
-  default = "64bit Amazon Linux 2018.03 v2.9.4 running PHP"
+  default = "64bit Amazon Linux 2 v3.2.1 running PHP"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "php_version" {
   # type    = "string"
-  default = ""
+  default = "7.2"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "document_root" {
@@ -262,7 +263,7 @@ variable "elb_subnets" {
 }
 variable "security_groups" {
   # type    = "string"
-  default = "sg-0bcd5fa924b7d0ef0"
+  default = "	sg-06adaa2e300defd28"
   description = "Lists the Amazon EC2 security groups to assign to the EC2 instances in the Auto Scaling group in order to define firewall rules for the instances."
 }
 
