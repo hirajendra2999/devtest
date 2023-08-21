@@ -168,27 +168,27 @@ variable "as_lower_threshold" {
   description = "If the measurement falls below this number for the breach duration, a trigger is fired."
 }
 variable "as_measure_name" {
-  type = "string"
+#  type = "string"
   default = "NetworkOut"
   description = "Metric used for your Auto Scaling trigger."
 }
 variable "as_period" {
-  type = "string"
+#  type = "string"
   default = "5"
   description = "Specifies how frequently Amazon CloudWatch measures the metrics for your trigger."
 }
 variable "as_statistic" {
-  type = "string"
+#  type = "string"
   default = "Average"
   description = "Statistic the trigger should use, such as Average."
 }
 variable "as_unit" {
-  type = "string"
+#  type = "string"
   default = "Bytes"
   description = "Unit for the trigger measurement, such as Bytes."
 }
 variable "as_upper_breachs_scale_increment" {
-  type = "string"
+#  type = "string"
   default = "1"
   description = "How many Amazon EC2 instances to add when performing a scaling activity."
 }
