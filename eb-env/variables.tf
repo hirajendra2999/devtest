@@ -183,17 +183,17 @@ variable "as_statistic" {
   description = "Statistic the trigger should use, such as Average."
 }
 variable "as_unit" {
-  type = "string"
+ # type = "string"
   default = "Bytes"
   description = "Unit for the trigger measurement, such as Bytes."
 }
 variable "as_upper_breachs_scale_increment" {
-  type = "string"
+ # type = "string"
   default = "1"
   description = "How many Amazon EC2 instances to add when performing a scaling activity."
 }
 variable "as_upper_threshold" {
-  type = "string"
+ # type = "string"
   default = "6000000"
   description = "If the measurement is higher than this number for the breach duration, a trigger is fired."
 }
