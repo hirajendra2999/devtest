@@ -33,7 +33,7 @@ variable "instance_volume_type" {
   # io1 for provisioned IOPS SSD
 }
 variable "instance_volume_size" {
-  type    = "string"
+ # type    = "string"
   default = "10"
   description = "Storage capacity of the root Amazon EBS volume in whole GB. Required if you set RootVolumeType to provisioned IOPS SSD."
   # 10 to 16384 GB for general purpose and provisioned IOPS SSD.
