@@ -193,7 +193,7 @@ variable "as_upper_breachs_scale_increment" {
   description = "How many Amazon EC2 instances to add when performing a scaling activity."
 }
 variable "as_upper_threshold" {
-  type = "string"
+ # type = "string"
   default = "6000000"
   description = "If the measurement is higher than this number for the breach duration, a trigger is fired."
 }
@@ -201,27 +201,27 @@ variable "as_upper_threshold" {
 # PHP Platform Options
 # Namespace: aws:elasticbeanstalk:container:php:phpini
 variable "eb_solution_stack_name" {
-  type    = "string"
+ # type    = "string"
   default = "64bit Amazon Linux 2018.03 v2.8.4 running PHP"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "php_version" {
-  type    = "string"
+ # type    = "string"
   default = "7.2"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "document_root" {
-  type    = "string"
+#  type    = "string"
   default = "/"
   description = "Specify the child directory of your project that is treated as the public-facing web root."
 }
 variable "memory_limit" {
-  type    = "string"
+#  type    = "string"
   default = "256M"
   description = "Amount of memory allocated to the PHP environment."
 }
 variable "zlib_php_compression" {
-  type    = "string"
+#  type    = "string"
   default = "Off"
   description = "Specifies whether or not PHP should use compression for output."
 }
