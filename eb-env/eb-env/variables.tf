@@ -95,17 +95,17 @@ variable "ssl_certificate_id" {
   description = "ARN of an SSL certificate to bind to the listener."
 }
 variable "healthcheck_url" {
-  type    = "string"
+#  type    = "string"
   default = "/"
   description = "The path to which to send health check requests."
 }
 variable "healthcheck_healthy_threshold" {
-  type    = "string"
+#  type    = "string"
   default = "3"
   description = "Consecutive successful requests before Elastic Load Balancing changes the instance health status."
 }
 variable "healthcheck_unhealthy_threshold" {
-  type    = "string"
+#  type    = "string"
   default = "5"
   description = "Consecutive unsuccessful requests before Elastic Load Balancing changes the instance health status."
 }
