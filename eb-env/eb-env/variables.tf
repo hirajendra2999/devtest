@@ -241,7 +241,7 @@ variable "max_execution_time" {
   description = "Sets the maximum time, in seconds, a script is allowed to run before it is terminated by the environment."
 }
 variable "composer_options" {
-  type    = "string"
+ # type    = "string"
   default = ""
   description = "Sets custom options to use when installing dependencies using Composer through composer.phar install."
   # For more information including available options, go to http://getcomposer.org/doc/03-cli.md#install.
@@ -249,15 +249,15 @@ variable "composer_options" {
 
 # Security
 variable "vpc_id" {
-  type    = "string"
+#  type    = "string"
   description = "The ID for your VPC."
 }
 variable "vpc_subnets" {
-  type    = "string"
+ # type    = "string"
   description = "The IDs of the Auto Scaling group subnet or subnets."
 }
 variable "elb_subnets" {
-  type    = "string"
+#  type    = "string"
   description = "The IDs of the subnet or subnets for the elastic load balancer."
 }
 variable "security_groups" {
