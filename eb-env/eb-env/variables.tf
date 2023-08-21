@@ -13,19 +13,19 @@ variable "service_name" {
   description = "The application name"
 }
 variable "env" {
-  type    = "string"
+  #type    = "string"
   default = "rajendratest"
   description = "The environment (dev, stage, prod)"
 }
 
 # Instance
 variable "instance_type" {
-  type    = "string"
+ # type    = "string"
   default = "t3.small"
   description = "The EC2 instance type"
 }
 variable "instance_volume_type" {
-  type    = "string"
+ # type    = "string"
   default = "gp2"
   description = "Volume type (magnetic, general purpose SSD or provisioned IOPS SSD) to use for the root Amazon EBS volume attached to your environment's EC2 instances."
   # standard for magnetic storage
