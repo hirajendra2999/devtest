@@ -110,33 +110,33 @@ variable "healthcheck_unhealthy_threshold" {
   description = "Consecutive unsuccessful requests before Elastic Load Balancing changes the instance health status."
 }
 variable "healthcheck_interval" {
-  type    = "string"
+#  type    = "string"
   default = "10"
   description = "The interval at which Elastic Load Balancing will check the health of your application's Amazon EC2 instances."
 }
 variable "healthcheck_timeout" {
-  type    = "string"
+#  type    = "string"
   default = "5"
   description = "Number of seconds Elastic Load Balancing will wait for a response before it considers the instance nonresponsive."
 }
 
 variable "ignore_healthcheck" {
-  type    = "string"
+#  type    = "string"
   default = "false"
   description = "Do not cancel a deployment due to failed health checks. (true | false)"
 }
 variable "healthreporting" {
-  type    = "string"
+ # type    = "string"
   default = "basic"
   description = "Health reporting system (basic or enhanced). Enhanced health reporting requires a service role and a version 2 platform configuration."
 }
 variable "notification_topic_arn" {
-  type    = "string"
+ # type    = "string"
   default = ""
   description = "Amazon Resource Name for the topic you subscribed to."
 }
 variable "enable_http" {
-  type = "string"
+#  type = "string"
   default = "true"
   description = "Enable or disable default HTTP connection on port 80."
 }
