@@ -91,7 +91,7 @@ variable "port" {
 }
 variable "ssl_certificate_id" {
   # type    = "string"
-  default = ""
+  default = "arn:aws:acm:ap-south-1:073675178113:certificate/14b7b3a9-1561-44bb-a965-482b26a39fb8"
   description = "ARN of an SSL certificate to bind to the listener."
 }
 variable "healthcheck_url" {
