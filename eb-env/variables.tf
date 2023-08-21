@@ -262,7 +262,7 @@ variable "elb_subnets" {
 }
 variable "security_groups" {
   # type    = "string"
-  default = "sg-0bcd5fa924b7d0ef0"
+  default = "	sg-06adaa2e300defd28"
   description = "Lists the Amazon EC2 security groups to assign to the EC2 instances in the Auto Scaling group in order to define firewall rules for the instances."
 }
 
