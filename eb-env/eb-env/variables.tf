@@ -57,17 +57,17 @@ variable "public_ip" {
   description = "EC2 instances must have a public ip (true | false)"
 }
 variable "min_instance" {
-  type    = "string"
+ # type    = "string"
   default = "1"
   description = "The minimum number of instances"
 }
 variable "max_instance" {
-  type    = "string"
+ # type    = "string"
   default = "1"
   description = "The maximum number of instances"
 }
 variable "deployment_policy" {
-  type    = "string"
+#  type    = "string"
   default = "Rolling"
   description = "The deployment policy"
   # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html?icmpid=docs_elasticbeanstalk_console
