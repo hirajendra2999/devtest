@@ -236,8 +236,7 @@ variable "display_errors" {
   description = "Specifies if error messages should be part of the output."
 }
 variable "max_execution_time" {
-#
-  type    = "string"
+#  type    = "string"
   default = "60"
   description = "Sets the maximum time, in seconds, a script is allowed to run before it is terminated by the environment."
 }
