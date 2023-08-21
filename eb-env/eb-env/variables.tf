@@ -73,24 +73,24 @@ variable "deployment_policy" {
   # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html?icmpid=docs_elasticbeanstalk_console
 }
 variable "environmentType" {
-  type    = "string"
+ # type    = "string"
   default = "LoadBalanced"
   description = "Set to SingleInstance to launch one EC2 instance with no load balancer."
 }
 
 # Load Balancing
 variable "loadBalancerType" {
-  type    = "string"
+#  type    = "string"
   default = "classic"
   description = "The type of load balancer for your environment. (classic, application, network)"
 }
 variable "port" {
-  type    = "string"
+ # type    = "string"
   default = "80"
   description = "The instance port"
 }
 variable "ssl_certificate_id" {
-  type    = "string"
+#  type    = "string"
   default = ""
   description = "ARN of an SSL certificate to bind to the listener."
 }
