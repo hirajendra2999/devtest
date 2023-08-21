@@ -226,16 +226,17 @@ variable "zlib_php_compression" {
   description = "Specifies whether or not PHP should use compression for output."
 }
 variable "allow_url_fopen" {
-  type    = "string"
+ # type    = "string"
   default = "On"
   description = "Specifies if PHP's file functions are allowed to retrieve data from remote locations, such as websites or FTP servers."
 }
 variable "display_errors" {
-  type    = "string"
+#  type    = "string"
   default = "Off"
   description = "Specifies if error messages should be part of the output."
 }
 variable "max_execution_time" {
+#
   type    = "string"
   default = "60"
   description = "Sets the maximum time, in seconds, a script is allowed to run before it is terminated by the environment."
