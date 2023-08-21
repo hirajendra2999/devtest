@@ -153,12 +153,12 @@ variable "elb_connection_timeout" {
 
 # Auto Scaling
 variable "as_breach_duration" {
-  type = "string"
+ # type = "string"
   default = "5"
   description = "Amount of time, in minutes, a metric can be beyond its defined limit (as specified in the UpperThreshold and LowerThreshold) before the trigger fires."
 }
 variable "as_lower_breach_scale_increment" {
-  type = "string"
+ # type = "string"
   default = "-1"
   description = "How many Amazon EC2 instances to remove when performing a scaling activity."
 }
