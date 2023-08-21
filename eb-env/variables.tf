@@ -14,7 +14,7 @@ variable "service_name" {
 }
 variable "env" {
   # type    = "string"
-  default = "dev"
+  default = "dev123"
   description = "The environment (dev, stage, prod)"
 }
 
