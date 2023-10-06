@@ -1,10 +1,9 @@
-freeStyleJob('rj') {
-
+pipeline {
     agent any 
     stages {
         stage('Pull') { 
             steps {
-                git branch: 'main', credentialsId: 'git-test', url: 'https://github.com/hirajendra2999/devtest.git'
+                git branch: 'main', credentialsId: 'rj', url: 'https://github.com/hirajendra2999/devtest.git'
             }
         }
         stage('Build') { 
