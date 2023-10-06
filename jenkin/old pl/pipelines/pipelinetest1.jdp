@@ -1,3 +1,10 @@
+freeStyleJob('rj') {
+    steps {
+        shell('echo hello all is well')
+    }
+}
+
+
 pipeline {
     agent any 
     stages {
