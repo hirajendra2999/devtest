@@ -15,7 +15,7 @@ pipelineJob('pipeline_demo') {
 
             'url'('https://github.com/hirajendra2999/rworld.git')
 
-            'credentialsId'('github-git')
+            'credentialsId'('git-test')
 
           }
 
