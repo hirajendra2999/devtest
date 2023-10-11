@@ -39,7 +39,7 @@ pipelineJob('pipeline_demo') {
 
       }
 
-      'scriptPath'('jenkin/old pl/pipelines/seedjobs/pipelineTemplate.groovy')
+      'scriptPath'('pipelines/pipeline2.jdp')
 
       'lightweight'(true)
 
