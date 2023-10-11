@@ -13,7 +13,7 @@ pipelineJob('pipeline_demo') {
         'userRemoteConfigs' {
           'hudson.plugins.git.UserRemoteConfig' {
 
-            'url'('https://github.com/hirajendra2999/rworld.git')
+            'url'('https://github.com/hirajendra2999/devtest.git')
 
             'credentialsId'('git-test')
 
